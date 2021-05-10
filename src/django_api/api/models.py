@@ -14,5 +14,5 @@ class ElectricityConsumption(models.Model):
     power_factor = models.FloatField()
 
     class Meta:
-        managed = True
+        managed = False
         db_table = 'electricity_consumption'

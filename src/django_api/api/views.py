@@ -16,12 +16,10 @@ class DataViewSet(viewsets.ModelViewSet):
         serialized_data = serializer.validated_data
         instance, created = models.ElectricityConsumption.objects.get_or_create(**serialized_data)
         if created:
-            serializer.save()
             created_message = {
                 'status_code': 201,
                 'detail': f'Object created with id: {instance.id}'
             }
-            print(instance)
             return JsonResponse(created_message, status=status.HTTP_201_CREATED)
         else:
             error_message = {
