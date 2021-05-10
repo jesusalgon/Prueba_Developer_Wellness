@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from rest_framework import viewsets, status, generics
+from rest_framework import viewsets, status
 from . import models
 from . import serializers
 from . import filters
