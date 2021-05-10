@@ -29,8 +29,3 @@ class DataViewSet(viewsets.ModelViewSet):
                 'detail': 'Error: Duplicate value cannot be crated'
             }
             return JsonResponse(error_message, status=status.HTTP_409_CONFLICT)
-
-
-class UpdateDataView(generics.UpdateAPIView):
-    queryset = models.ElectricityConsumption.objects.all()
-    serializer_class = serializers.DataSerializer
