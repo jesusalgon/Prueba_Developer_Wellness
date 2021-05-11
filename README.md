@@ -145,3 +145,7 @@ Algunas posibles mejoras serían:
 - Implementar un sistema de validación de los datos. Esto puede hacerse sonrecargando las funciones del serializer.
 - Hacer que los scripts para volcar datos en la tabla sean capaces de detectar cualquier csv. Esto se puede implementar fácilmente mediante una búsqueda regex con la librería glob.
 - Realizar una limpieza más profunda de los datos en el csv. En este caso, se ha supuesto que los datos son correctos (excepto los NaN), incluyendo las fechas y horas duplicadas. Sin embargo, echando un vistazo a los datos, pueden llegar a encontrarse anomalías subsanables (por ejemplo, valores negativos o que no cuadran con las unidades del resto de datos).
+
+# Notas importantes
+
+Dado que es un proyecto que va a ser evaluado, y no puesto en producción, he decidido dejar activos todos los logs de Django y a la vista aspectos como la *djago_secret_key* por si fuera necesario para el evaluador realizar alguna prueba sobre el código.
